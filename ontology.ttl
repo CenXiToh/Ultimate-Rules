@@ -1,0 +1,27 @@
+@prefix ns1: <http://ultimaterules.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:defensivePlayer ns1:isAlwaysIn ns1:InBoundsArea ;
+    rdfs:subClassOf ns1:player .
+
+ns1:disc a owl:Class .
+
+ns1:nonPlayer a owl:Class ;
+    ns1:isAlwaysIn ns1:OutOfBoundsArea .
+
+ns1:offensivePlayer ns1:canBeIn ns1:InBoundsArea,
+        ns1:OutOfBoundsArea ;
+    rdfs:subClassOf ns1:player .
+
+ns1:perimeterLine a ns1:OutOfBoundsArea ;
+    ns1:notPartOf ns1:playingField .
+
+ns1:playingField a ns1:InBoundsArea .
+
+ns1:player a owl:Class .
+
+ns1:InBoundsArea a owl:Class .
+
+ns1:OutOfBoundsArea a owl:Class .
+

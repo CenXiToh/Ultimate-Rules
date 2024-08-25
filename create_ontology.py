@@ -28,4 +28,4 @@ g.add((ns.perimeterLine, ns.notPartOf, ns.playingField))
 g.add((ns.disc, ns.hasStatus, ns.InBoundsArea))
 g.add((ns.disc, ns.hasStatus, ns.OutOfBoundsArea))
 
-g.serialize(destination="ontology.ttl")
+# g.serialize(destination="ontology.ttl")
